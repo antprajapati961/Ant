@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx -y @modelcontextprotocol/server-filesystem /home/ubuntu"
+    },
+    "memory": {
+      "command": "npx -y @modelcontextprotocol/server-memory"
+    }
+  },
+  "imports": []
+}
