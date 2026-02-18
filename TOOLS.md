@@ -31,6 +31,14 @@
 - No GPU — CPU only, but works fine for embedding tasks
 - Ollama can also run local LLMs if needed (pull any model)
 
+## EmbeddingGemma (PRIMARY embedding model)
+- Google's 300M parameter embedding model, built from Gemma 3
+- 100+ languages supported (Hindi ✅, English ✅, Gujarati ✅)
+- 768 dimensions, runs locally via Ollama
+- Usage: `curl http://localhost:11434/api/embeddings -d '{"model":"embeddinggemma","prompt":"your text"}'`
+- Best for multilingual search, classification, clustering, semantic similarity
+- Prefer over nomic-embed-text for Hindi/Gujarati content
+
 ## Perplexity Search (PRIMARY web search tool)
 - Available as model alias: `/model search` (sonar-pro) or `/model sonar`
 - Use via sub-agent spawn with model override: `search` or `sonar`
