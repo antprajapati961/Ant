@@ -54,6 +54,15 @@ opus, opus45, sonnet, sonnet4, sonnet37, haiku, o3, gpt51, gpt5, grok4, deepseek
 - Also works for: image analysis, general chat (Gemini native format)
 - Note: gemini-3-flash (non-preview) NOT available yet
 
+## TTS (Text-to-Speech) via Edge TTS
+- Binary: edge-tts (pip, already installed)
+- Voice: hi-IN-MadhurNeural (Hindi male) — default for bhai
+- FREE, unlimited, no API key needed
+- Usage: `edge-tts --voice "hi-IN-MadhurNeural" --text "text" --write-media output.mp3`
+- Send via: message tool with filePath
+- Other voices: `edge-tts --list-voices` (hundreds available)
+- English voice suggestion: en-IN-PrabhatNeural (Indian English male)
+
 ## Broken/Unavailable
 - **sag** (ElevenLabs TTS) — needs GLIBC_2.34, Ubuntu 20.04 has 2.31
 - **summarize** (steipete) — needs arm64, we're x64
