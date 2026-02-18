@@ -52,7 +52,6 @@
 
 | Tool | Issue | Fix |
 |------|-------|-----|
-| himalaya | IMAP auth fails ("Invalid credentials") | Need correct email app password |
 | gog (Google) | OAuth client disabled | Need to re-auth or fix OAuth client |
 | spogo (Spotify) | No cookies found | Need Spotify web cookies |
 | wacli (WhatsApp history) | Not authenticated | Run `wacli auth` for QR pairing |
