@@ -39,7 +39,21 @@
 ## Model Aliases (for /model command)
 opus, opus45, sonnet, sonnet4, sonnet37, haiku, o3, gpt51, gpt5, grok4, deepseek, gemini3, gemflash, search, sonar
 
+## STT (Speech-to-Text) via Gemini
+- Endpoint: beta.vertexapis.com (Gemini native API, NOT OpenAI-compatible)
+- Auth: key=sk-*** as query param
+- Models: gemini-3-flash-preview, gemini-2.5-flash, gemini-2.0-flash
+- Daily limit: 3500 requests
+- Usage: POST audio as base64 inline_data with mime_type
+- Example:
+  ```
+  curl -s "https://beta.vertexapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=KEY" \
+    -X POST -H "Content-Type: application/json" \
+    -d '{"contents":[{"role":"user","parts":[{"inline_data":{"mime_type":"audio/wav","data":"BASE64"}},{"text":"Transcribe this audio accurately."}]}]}'
+  ```
+- Also works for: image analysis, general chat (Gemini native format)
+- Note: gemini-3-flash (non-preview) NOT available yet
+
 ## Broken/Unavailable
 - **sag** (ElevenLabs TTS) — needs GLIBC_2.34, Ubuntu 20.04 has 2.31
 - **summarize** (steipete) — needs arm64, we're x64
-- **beta.vertexapis.com** — /v1/models returns "Not found" (may need different auth format)
