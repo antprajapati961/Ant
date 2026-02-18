@@ -23,9 +23,11 @@
 - Models: nano-banana-pro, gpt-image-1-5-hd, flux-pro-ultra, flux-kontext-pro, seedream-4-5, google-imagen-4, ideogram-3-quality, etc.
 - Usage: POST to /v1/models/{provider}/{model}/predictions
 
-## Perplexity Search
+## Perplexity Search (PRIMARY web search tool)
 - Available as model alias: `/model search` (sonar-pro) or `/model sonar`
-- Also via sub-agent spawn with model override
+- Use via sub-agent spawn with model override: `search` or `sonar`
+- ALWAYS prefer this over Brave/web_search for any web research
+- 3000 requests/day
 
 ## Model Providers & Endpoints
 | Provider | Endpoint | Daily Limit | Models |
