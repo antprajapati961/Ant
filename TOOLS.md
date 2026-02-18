@@ -23,6 +23,14 @@
 - Models: nano-banana-pro, gpt-image-1-5-hd, flux-pro-ultra, flux-kontext-pro, seedream-4-5, google-imagen-4, ideogram-3-quality, etc.
 - Usage: POST to /v1/models/{provider}/{model}/predictions
 
+## Embeddings (Local via Ollama)
+- Ollama installed, running at http://localhost:11434
+- Model: nomic-embed-text (768 dimensions, CPU-only)
+- FREE, unlimited, no API key
+- Usage: `curl http://localhost:11434/api/embeddings -d '{"model":"nomic-embed-text","prompt":"your text"}'`
+- No GPU — CPU only, but works fine for embedding tasks
+- Ollama can also run local LLMs if needed (pull any model)
+
 ## Perplexity Search (PRIMARY web search tool)
 - Available as model alias: `/model search` (sonar-pro) or `/model sonar`
 - Use via sub-agent spawn with model override: `search` or `sonar`
