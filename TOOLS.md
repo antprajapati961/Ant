@@ -28,7 +28,11 @@
   - Auth: Bearer sk-***
   - Usage: POST /api/imagen → GET /api/imagen/:id (poll for result)
   - 4 video models: veo-3-1-fast, kling-2-5-turbo-pro, pixverse-v5, seedance-1-5-pro
-- **Gate AI:** api.gateai.app — 150/day (Image, Video, Audio, 3D) — often down
+- **Gate AI:** api.gateai.app — 150/day (Image, Video, Audio, 3D)
+  - Working models: FLUX Schnell, FLUX Pro Ultra, FLUX Kontext Pro/Max, Seedream 4, Photon Flash, SD 3.5 Large
+  - Endpoint: POST /v1/models/{provider}/{model}/predictions with {"input":{"prompt":"..."}}
+  - Auth: Bearer sk-***
+  - Also has: Video (Sora 2, Kling V2.1/2.6, Runway Gen4, Seedance, WAN 2.5, Hailuo), Audio (MiniMax Speech, ElevenLabs V3), 3D (Hunyuan3D), Upscale (Topaz)
 
 ## Embeddings (Local via Ollama)
 - Ollama installed, running at http://localhost:11434
