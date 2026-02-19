@@ -1,10 +1,12 @@
 {
   "lastChecks": {
-    "email": null,
-    "calendar": null,
+    "email": 1771487100,
+    "calendar": 1771487100,
     "weather": null,
-    "github": null,
+    "github": 1771487100,
     "blogwatcher": null,
-    "system": null
-  }
+    "system": 1771487100
+  },
+  "lastCheckDate": "2026-02-19T07:45:00Z",
+  "notes": "First heartbeat: all clear. No urgent emails, no calendar events, no GH notifications, system healthy (46% disk, 3GB/15GB RAM)"
 }
