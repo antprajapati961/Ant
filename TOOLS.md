@@ -18,10 +18,17 @@
 - Usage: `oracle --prompt "question" -f file1.py file2.js`
 
 ## Image Generation (via curl)
-- Endpoint: https://img.claude.gg
-- Auth: Bearer sk-*** (same Cortex key)
-- Models: nano-banana-pro, gpt-image-1-5-hd, flux-pro-ultra, flux-kontext-pro, seedream-4-5, google-imagen-4, ideogram-3-quality, etc.
-- Usage: POST to /v1/models/{provider}/{model}/predictions
+- **PRIMARY (working):** beta.vertexapis.com — Gemini native API
+  - Models: gemini-2.0-flash-exp, gemini-2.0-flash-preview-image-generation
+  - Auth: key=sk-*** as query param
+  - Usage: POST to /v1beta/models/{model}:generateContent with responseModalities:["IMAGE","TEXT"]
+  - Returns base64 PNG inline
+- **SECONDARY (often down):** img.claude.gg — async job API
+  - 22 models: nano-banana-pro, gpt-image-1-5-hd, flux-pro-ultra, flux-kontext-pro, seedream-4-5, google-imagen-4, ideogram-3-quality, recraft-v4, etc.
+  - Auth: Bearer sk-***
+  - Usage: POST /api/imagen → GET /api/imagen/:id (poll for result)
+  - 4 video models: veo-3-1-fast, kling-2-5-turbo-pro, pixverse-v5, seedance-1-5-pro
+- **Gate AI:** api.gateai.app — 150/day (Image, Video, Audio, 3D) — often down
 
 ## Embeddings (Local via Ollama)
 - Ollama installed, running at http://localhost:11434
