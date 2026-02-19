@@ -81,6 +81,18 @@ opus, opus45, sonnet, sonnet4, sonnet37, haiku, o3, gpt51, gpt5, grok4, deepseek
 - Other voices: `edge-tts --list-voices` (hundreds available)
 - English voice suggestion: en-IN-PrabhatNeural (Indian English male)
 
+## Summarize (custom script + fabric)
+- **summarize-url** (~/bin/summarize-url) — custom script for YouTube, URLs, local files
+  - YouTube: uses youtube-transcript-api → GPT-5-mini for summary
+  - URLs: fetches HTML, strips tags → GPT-5-mini for summary
+  - Files: reads text → GPT-5-mini for summary
+  - Usage: `summarize-url <url|file> [custom prompt]`
+- **fabric** (/home/linuxbrew/.linuxbrew/bin/fabric-ai) — Daniel Miessler's AI CLI
+  - Version: 1.4.413
+  - Usage: `fabric-ai --help`
+- **yt-dlp** — YouTube downloader (for audio/video extraction)
+- **youtube-transcript-api** — Python lib for YouTube transcripts
+
 ## Broken/Unavailable
 - **sag** (ElevenLabs TTS) — needs GLIBC_2.34, Ubuntu 20.04 has 2.31
 - **summarize** (steipete) — needs arm64, we're x64
